@@ -64,6 +64,15 @@ const routes = [
       ),
   },
   {
+    path: "/invoices",
+    name: "Invoices",
+    component: () =>
+      import(/* webpackChunkName: "Invoices" */ "../views/PageInvoices"),
+    meta: {
+      requiresAuth: true,
+    },
+  },
+  {
     path: "/404",
     alias: "*",
     name: "PageNotFound",
@@ -104,6 +113,7 @@ router.beforeEach((to, from, next) => {
     if (!store.user) {
       next({
         name: "Login",
+        query: { redirect: to.fullPath },
       });
     } else {
       next();
