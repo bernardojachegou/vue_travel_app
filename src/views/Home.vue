@@ -58,7 +58,7 @@ img {
 }
 
 a {
-  color: lightseagreen;
+  color: #42b983;
   text-decoration: none;
 }
 a:hover,
