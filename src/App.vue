@@ -29,9 +29,21 @@ export default {
 .slide-leave-active {
   transition: opacity 0.5s, transform 0.5s;
 }
+
 .slide-enter,
 .slide-leave-to {
   opacity: 0;
   transform: translateY(-5%);
+}
+
+.input {
+  border: 1px solid green;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: green;
+  color: white;
+  padding: 10px;
 }
 </style>
