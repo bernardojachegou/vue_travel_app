@@ -2,8 +2,10 @@
   <div>
     <h1>Not Found</h1>
     <p>
-      Oops we couldn't find that page. Try going
-      <router-link :to="{ name: 'Home' }"><strong>Home</strong></router-link>
+      Oops we couldn't find that page. Try back to the
+      <router-link :to="{ name: 'Home' }"
+        ><strong>home page.</strong></router-link
+      >
     </p>
   </div>
 </template>
