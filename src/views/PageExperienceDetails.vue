@@ -46,14 +46,16 @@ img {
   width: 100%;
   max-height: 400px;
 }
-.experience-details {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 0;
-}
+
 p {
   margin: 0 40px;
   font-size: 20px;
   text-align: left;
+}
+
+.experience-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
 }
 </style>

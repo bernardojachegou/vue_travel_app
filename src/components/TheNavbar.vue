@@ -51,6 +51,7 @@ export default {
   background-color: white;
   border-bottom: 1px solid grey;
   z-index: 1;
+  padding: 24px 0;
 }
 
 #nav a {
@@ -61,21 +62,33 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+  text-decoration: underline;
+}
+
+#nav li:last-child a {
+  background-color: #42b983;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
 }
 
 .nav-links {
   display: flex;
 }
+
 .links {
   padding-right: 20px;
   list-style: none;
 }
+
 .links:hover {
   text-decoration: underline;
 }
+
 .logo {
   font-size: 20px;
   color: purple;
   font-weight: bold;
+  margin: 0 12px;
 }
 </style>

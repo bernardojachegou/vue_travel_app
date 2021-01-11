@@ -28,3 +28,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h1,
+p,
+button {
+  margin: 16px 0;
+}
+</style>

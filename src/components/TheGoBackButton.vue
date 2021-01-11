@@ -1,6 +1,8 @@
 <template>
   <span class="go-back">
-    <button @click="goBack" id="back-button">Go back</button>
+    <button @click="goBack" id="back-button">
+      <font-awesome-icon :icon="['fas', 'arrow-left']" />
+    </button>
   </span>
 </template>
 
@@ -15,20 +17,24 @@ export default {
 </script>
 
 <style scoped>
-.go-back {
-  display: flex;
+button {
+  border: 0;
+  margin: 16px;
   cursor: pointer;
 }
 
-button {
-  border: 0;
+.go-back {
+  display: flex;
 }
 
 #back-button {
   background-color: #42b983;
+  padding: 12px;
   border-radius: 8px;
   color: White;
   transition: 300ms;
+  font-weight: bold;
+  width: 100px;
 }
 
 #back-button:hover {

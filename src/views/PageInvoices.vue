@@ -1,5 +1,5 @@
 <template>
-  <h1>my invoices</h1>
+  <h1>My invoices</h1>
 </template>
 
 <script>

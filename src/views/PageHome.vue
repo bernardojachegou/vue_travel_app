@@ -43,13 +43,28 @@ export default {
 </script>
 
 <style scoped>
+img {
+  max-width: 200px;
+  margin: 24px;
+}
+
+a {
+  color: #42b983;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  text-decoration: underline;
+}
+
 .home {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-img {
-  max-width: 200px;
+.home h1 {
+  margin: 24px;
 }
 
 .destinations {
@@ -57,12 +72,7 @@ img {
   justify-content: space-between;
 }
 
-a {
-  color: #42b983;
-  text-decoration: none;
-}
-a:hover,
-a:visited {
-  text-decoration: underline;
+.destinations h2 {
+  margin: 0 12px;
 }
 </style>

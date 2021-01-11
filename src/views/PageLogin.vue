@@ -30,10 +30,19 @@ export default {
 };
 </script>
 <style scoped>
+label {
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin-top: 16px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: 0 auto;
+  padding-top: 16px;
 }
 </style>

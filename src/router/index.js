@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/PageHome.vue";
 import store from "@/store";
 
 Vue.use(VueRouter);
@@ -19,17 +19,17 @@ const routes = [
     component: () =>
       import(
         /* webpackChunkName: "DestinationDetails"
-         */ "../views/DestinationDetails"
+         */ "../views/PageDestinationDetails"
       ),
     children: [
       {
         path: ":experienceSlug",
-        name: "experienceDetails",
+        name: "ExperienceDetails",
         props: true,
         compoent: () =>
           import(
             /* webpackChunkName: "ExperienceDetails"
-             */ "../views/ExperienceDetails"
+             */ "../views/PageExperienceDetails"
           ),
       },
     ],

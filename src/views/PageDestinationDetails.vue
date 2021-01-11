@@ -21,7 +21,7 @@
         >
           <router-link
             :to="{
-              name: 'experienceDetails',
+              name: 'ExperienceDetails',
               params: { experienceSlug: experience.slug },
               hash: '#experience',
             }"
@@ -43,7 +43,7 @@
 
 <script>
 import store from "@/store";
-import GoBackButton from "@/components/TheGoBack";
+import GoBackButton from "@/components/TheGoBackButton";
 export default {
   components: {
     GoBackButton,
@@ -75,6 +75,21 @@ img {
   max-height: 400px;
 }
 
+p {
+  margin: 0 40px;
+  font-size: 20px;
+  text-align: left;
+}
+
+h1,
+h2 {
+  margin-bottom: 16px;
+}
+
+.destination-details img {
+  padding-left: 20px;
+}
+
 .experiences {
   padding: 40px 0;
 }
@@ -83,12 +98,6 @@ img {
 .cards {
   display: flex;
   justify-content: space-between;
-}
-
-p {
-  margin: 0 40px;
-  font-size: 20px;
-  text-align: left;
 }
 
 .card img {
