@@ -1,5 +1,6 @@
 <template>
   <div>
+    <GoBackButton />
     <section class="destinations">
       <h1>{{ destination.name }}</h1>
       <div class="destination-details">
@@ -34,14 +35,18 @@
           </router-link>
         </div>
       </div>
-      <!-- <router-view :key="$route.path" /> -->
+      <router-view :key="$route.path" />
     </section>
   </div>
 </template>
 
 <script>
 import store from "@/store";
+import GoBackButton from "@/components/TheGoBack";
 export default {
+  components: {
+    GoBackButton,
+  },
   data() {
     return {};
   },
