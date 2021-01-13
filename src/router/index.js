@@ -21,28 +21,15 @@ const routes = [
         /* webpackChunkName: "DestinationDetails"
          */ "../views/PageDestinationDetails"
       ),
-    children: [
-      {
-        path: ":experienceSlug",
-        name: "ExperienceDetails",
-        props: true,
-        compoent: () =>
-          import(
-            /* webpackChunkName: "ExperienceDetails"
-             */ "../views/PageExperienceDetails"
-          ),
-      },
-    ],
-    beforeEnter: (to, from, next) => {
-      const exists = store.destinations.find(
-        (destination) => destination.slug === to.params.slug
-      );
-      if (exists) {
-        next();
-      } else {
-        next({ name: "PageNotFound" });
-      }
-    },
+  },
+  {
+    path: "/:slug/:experienceSlug",
+    name: "ExperienceDetails",
+    props: true,
+    component: () =>
+      import(
+        /* webpackChunkName: "PageExperienceDetails"*/ "../views/PageExperienceDetails.vue"
+      ),
   },
   {
     path: "/user",

@@ -40,11 +40,16 @@ export default {
 </script>
 
 <style scoped>
+h2 {
+  margin-top: 24px;
+}
+
 img {
   max-width: 600px;
   height: auto;
   width: 100%;
   max-height: 400px;
+  margin-left: 20px;
 }
 
 p {
