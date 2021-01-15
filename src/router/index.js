@@ -33,6 +33,16 @@ const routes = [
           ),
       },
     ],
+    beforeEnter: (to, from, next) => {
+      const exists = store.destinations.find(
+        (destination) => destination.slug === to.params.slug
+      );
+      if (exists) {
+        next();
+      } else {
+        next({ name: "PageNotFound" });
+      }
+    },
   },
   {
     path: "/user",
