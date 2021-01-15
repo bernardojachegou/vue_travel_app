@@ -36,6 +36,9 @@
           </router-link>
         </div>
       </div>
+      <pre>
+        {{ $route.path }}
+      </pre>
       <router-view :key="$route.path" />
     </section>
   </div>

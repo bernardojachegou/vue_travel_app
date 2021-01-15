@@ -21,15 +21,18 @@ const routes = [
         /* webpackChunkName: "DestinationDetails"
          */ "../views/PageDestinationDetails"
       ),
-  },
-  {
-    path: "/:slug/:experienceSlug",
-    name: "ExperienceDetails",
-    props: true,
-    component: () =>
-      import(
-        /* webpackChunkName: "PageExperienceDetails"*/ "../views/PageExperienceDetails.vue"
-      ),
+    children: [
+      {
+        path: ":experienceSlug",
+        name: "ExperienceDetails",
+        props: true,
+        compoent: () =>
+          import(
+            /* webpackChunkName: "ExperienceDetails"
+             */ "../views/PageExperienceDetails"
+          ),
+      },
+    ],
   },
   {
     path: "/user",
@@ -96,7 +99,9 @@ const router = new VueRouter({
 // creating a secuirty guard;
 
 router.beforeEach((to, from, next) => {
+  debugger;
   if (to.matched.some((record) => record.meta.requiresAuth)) {
+    debugger;
     if (!store.user) {
       next({
         name: "Login",
