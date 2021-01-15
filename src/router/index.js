@@ -26,10 +26,10 @@ const routes = [
         path: ":experienceSlug",
         name: "ExperienceDetails",
         props: true,
-        compoent: () =>
+        component: () =>
           import(
-            /* webpackChunkName: "ExperienceDetails"
-             */ "../views/PageExperienceDetails"
+            /*webpackChunkName: "ExperienceDetails"
+             */ "@/views/PageExperienceDetails"
           ),
       },
     ],
@@ -101,7 +101,6 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   debugger;
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    debugger;
     if (!store.user) {
       next({
         name: "Login",
